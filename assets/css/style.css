@@ -131,8 +131,8 @@ img {
 
 .qa__item summary::after {
     content: "";
-    flex: 0 0 26px;
-    width: 26px;
+    flex: 0 0 2.6rem;
+    width: 2.6rem;
     aspect-ratio: 26 / 14;
     height: auto;
     background-image: url(../images/img_open.png);
