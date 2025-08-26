@@ -1,0 +1,374 @@
+/* ---common--- */
+
+html {
+    font-size: calc(10/750*100vw);
+}
+
+a {
+    background-color: transparent;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+main {
+    max-width: 750px;
+    width: 100%;
+    margin: auto;
+
+}
+
+.fv,
+.cta,
+.trouble,
+.about,
+.voice,
+.used,
+.faq {
+    max-width: 750px;
+    width: 100%;
+}
+
+img {
+    max-width: 750px;
+    width: 100%;
+}
+
+.cta {
+    max-width: 750px;
+    width: 100%;
+    background-image: url(../images/bg_cta@2x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+}
+
+.button__cta {
+    max-width: 750px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* --- faq --- */
+
+.faq {
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: top center;
+
+    background-image: url(../images/bg_faq@2x.png);
+
+    padding-bottom: 8.5rem;
+}
+
+.faq__title {
+    width: 49.1rem;
+    margin: 0 auto;
+    padding: 8.5rem 0 8rem;
+
+    align-items: center;
+}
+
+
+.qa__item {
+    max-width: 690px;
+    width: 92%;
+    margin: 0 auto;
+    margin-bottom: 2.2rem;
+
+    font-style: normal;
+}
+
+.qa__item summary {
+    display: flex;
+    background-color: #1952b9;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 1rem 2rem 1rem 5.7rem;
+    font-family: "Shippori Mincho", serif;
+    font-weight: 400;
+    font-size: 3.2rem;
+    color: #fff;
+    cursor: pointer;
+    line-height: 1.4;
+    list-style: none;
+}
+
+.qa__item summary::-webkit-details-marker {
+    display: none;
+}
+
+/* 2行以上になったら上寄せ */
+.qa__item summary.is-multiline {
+    align-items: flex-start;
+}
+
+.qa__item summary.is-multiline::after {
+    align-self: flex-start;
+    margin-top: 1.5rem;
+    /* 微調整 */
+}
+
+.qa__summary--tight {
+    letter-spacing: -0.05em;
+    /* ← 少し詰める */
+    line-height: 1.3;
+    /* 行間も少し詰めると収まりやすい */
+}
+
+.qa__item summary::before {
+    content: 'Q';
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    position: absolute;
+    left: 2rem;
+    width: 4rem;
+    height: 4rem;
+    display: inline-block;
+}
+
+.qa__item summary::after {
+    content: "";
+    flex: 0 0 26px;
+    width: 26px;
+    aspect-ratio: 26 / 14;
+    height: auto;
+    background-image: url(/assets/images/img_open.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: transform 0.5s;
+
+    margin-left: 0.7rem;
+}
+
+
+
+.qa__item[open] summary::after {
+    transform: rotate(180deg);
+}
+
+.qa__item p {
+    max-width: 707px;
+    width: 100%;
+    position: relative;
+    transform: translateY(-10px);
+    opacity: 0;
+    margin: 0.7rem 0 0;
+    padding: 1.5rem 2rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 300;
+
+    color: #030303;
+    background-color: #fff;
+}
+
+.qa__item[open] p {
+    opacity: 1;
+}
+
+footer {
+    max-width: 750px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #e4d28e;
+    padding-top: 1rem;
+}
+
+.footer__inner {
+    background-image: linear-gradient(90deg, #255abb, #5a7fc4 50%, #255abb);
+    padding: 5.1rem 0 4rem;
+    text-align: center;
+    color: #fff;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+nav {
+    width: 53rem;
+    margin: 0 auto 4rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+
+}
+
+nav a:nth-child(1) {
+    border-right: 1px solid #fff;
+    padding-right: 2.8rem;
+}
+
+nav a:nth-child(3) {
+    border-left: 1px solid #fff;
+    padding-left: 2.8rem;
+}
+
+nav small {
+    font-size: 1rem;
+}
+
+
+@media(min-width:751px) {
+
+    .content_wrap {
+        background-color: rgba(210, 246, 255, 0.5);
+    }
+
+    main {
+        background-color: #fff;
+        box-shadow: 6px 6px 40px rgba(5, 35, 85, 0.3);
+    }
+
+    /* --- faq --- */
+
+    .faq {
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: top center;
+        background-image: url(../images/bg_faq@2x.png);
+
+        padding-bottom: 85px;
+    }
+
+    .faq__title {
+        width: 491px;
+        margin: 0 auto;
+        padding: 85px 0 80px;
+
+        align-items: center;
+    }
+
+    .qa__item {
+        max-width: 690px;
+        width: 92%;
+        margin: 0 auto;
+        margin-bottom: 22px;
+
+        font-style: normal;
+    }
+
+    .qa__item summary {
+        display: flex;
+        background-color: #1952b9;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding: 10px 20px 10px 57px;
+        font-family: "Shippori Mincho", serif;
+        font-weight: 400;
+        font-size: 32px;
+        color: #fff;
+        cursor: pointer;
+        line-height: 1.4;
+        list-style: none;
+    }
+
+    .qa__item summary::-webkit-details-marker {
+        display: none;
+    }
+
+    /* 2行以上になったら上寄せ */
+    .qa__item summary.is-multiline {
+        align-items: flex-start;
+    }
+
+    .qa__item summary.is-multiline::after {
+        align-self: flex-start;
+        margin-top: 15px;
+        /* 微調整 */
+    }
+
+    .qa__summary--tight {
+        letter-spacing: -0.05em;
+        /* ← 少し詰める */
+        line-height: 1.3;
+        /* 行間も少し詰めると収まりやすい */
+    }
+
+    .qa__item summary::before {
+        content: 'Q';
+        left: 20px;
+        width: 40px;
+        height: auto;
+        display: inline-block;
+    }
+
+    .qa__item summary::after {
+        content: "";
+        flex: 0 0 26px;
+        width: 26px;
+        aspect-ratio: 26 / 14;
+        height: auto;
+        background-image: url(/assets/images/img_open.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: transform 0.5s;
+        margin-left: 7px;
+    }
+
+    .qa__item[open] summary::after {
+        transform: rotate(180deg);
+    }
+
+    .qa__item p {
+        max-width: 707px;
+        width: 100%;
+        position: relative;
+        transform: translateY(-10px);
+        opacity: 0;
+        margin: 7px 0 0;
+        padding: 15px 20px;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 28px;
+        font-weight: 300;
+
+        color: #030303;
+        background-color: #fff;
+    }
+
+    .qa__item[open] p {
+        opacity: 1;
+    }
+
+    footer {
+        max-width: 750px;
+        width: 100%;
+        margin: 0 auto;
+        background-color: #e4d28e;
+        padding-top: 10px;
+    }
+
+    .footer__inner {
+        background-image: linear-gradient(90deg, #255abb, #5a7fc4 50%, #255abb);
+        padding: 51px 0 40px;
+        text-align: center;
+        color: #fff;
+        font-family: 'Noto Sans JP', sans-serif;
+    }
+
+    nav {
+        width: 530px;
+        margin: 0 auto 40px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+
+    }
+
+    nav a:nth-child(1) {
+        border-right: 1px solid #fff;
+        padding-right: 28px;
+    }
+
+    nav a:nth-child(3) {
+        border-left: 1px solid #fff;
+        padding-left: 28px;
+    }
+
+    nav small {
+        font-size: 10px;
+    }
+}
